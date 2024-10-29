@@ -18,8 +18,8 @@ const Navbar = () => (
       ))}
     </ul>
     <div className="space-x-4">
-      <button className="text-gray-700">Log in</button>
-      <button className="bg-green-600 text-white py-2 px-4 rounded-full">
+      <button className="text-gray-700 py-1 px-4 border-black border rounded-full">Log in</button>
+      <button className="bg-green-600 text-white py-1.5 px-3 rounded-full">
         Get in touch
       </button>
     </div>
