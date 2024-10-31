@@ -57,7 +57,6 @@ function Section5(){
           {caseStudies.map((caseStudy, index) => (
             <div key={index} className=" rounded-xl bg-slate-100 p-8">
               <div className='flex w-full'>
-
               <div className=" w-[50%] items-start justify-center flex flex-col gap-y-8 px-9">
                 <h2 className="text-3xl font-bold mb-4">{caseStudy.company}</h2>
                 <p className="text-2xl mb-4">{caseStudy.text}</p>
@@ -80,14 +79,13 @@ function Section5(){
             </div>
           ))}
         </Slider>
-  
         {/* Custom Progress Indicator */}
         <div className="flex justify-center gap-3 mt-6">
           {caseStudies.map((item, index) => (
             <div>
             <div
               key={index}
-              className={`w-40 h-[5px] rounded-2xl ${
+              className={`w-40 mt-[20px] h-[5px] rounded-2xl ${
                 currentSlide === index ? 'bg-green-500' : 'bg-gray-300'
               } transition-colors duration-300`}
             />
