@@ -2,7 +2,12 @@ import React, {useState} from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
-
+import { MdOutlineWbSunny } from "react-icons/md";
+import { MdOutlineWindPower } from "react-icons/md";
+import { RiWirelessChargingFill } from "react-icons/ri";
+import img1 from '../img/photovoltaic-system-2742302_1920.jpg'
+import img2 from '../img/house-699978_1920.jpg'
+import img3 from '../img/solar-system-2939551_1280.jpg'
 function Section5(){
     //Ayesha Mehmood
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -17,49 +22,60 @@ function Section5(){
       };
     const caseStudies = [
       {
-        image: 'path/to/image1.jpg',
+        image: img1,
         company: 'Medtronic',
-        text: `"We have used services from Xurya for most of our stations..."`,
+        text: `"Switching to solar with SolarTech Innovations was one of the best decisions we've made. The team was professional, the installation was seamless, and we've seen a significant reduction in our energy bills. Their commitment to customer satisfaction is truly impressive!"`,
         name: 'Jeniffer Kolobaly',
-        title: 'CTO EV Medtronic'
+        title: 'CTO EV Medtronic',
+        icon:<MdOutlineWbSunny size={25} />,
+        iconText: "Charging"
       },
       {
-        image: 'path/to/image2.jpg',
-        company: 'Company 2',
-        text: `"Their services have been excellent..."`,
+        image: img2,
+        company: 'SunVolt Energy',
+        text: `"SunVolt Energy delivered on all fronts—quality, reliability, and affordability. Our solar system has been running smoothly, and we're thrilled with the results. It's clear they truly care about their clients and sustainable energy."`,
         name: 'John Doe',
-        title: 'CEO, Company 2'
+        title: 'CEO, Company 2',
+        icon:<MdOutlineWindPower size={25} />,
+        iconText: "Electric Station"
       },
       {
-        image: 'path/to/image3.jpg',
-        company: 'Company 3',
-        text: `"A reliable partner for solar solutions..."`,
+        image: img3,
+        company: 'BrightSolar',
+        text: `"Working with BrightSolar Solutions was a pleasure. They provided a detailed, personalized solar plan that fit our needs perfectly. We now produce clean energy for our operations and have drastically reduced our carbon footprint."`,
         name: 'Jane Smith',
-        title: 'Director, Company 3'
+        title: 'Director, Company 3',
+        icon:<RiWirelessChargingFill size={25}/>,
+        iconText: "Wind Mills"
       }
     ];
-  
-    return (
-      <div className="w-11/12 mx-auto text-center">
+    return(
+      <div className='w-full items-center  flex flex-col py-36'>
+        <h1 style={{"lineHeight": "70px"}} className='text-5xl font-semibold w-[35%] text-center mb-10'>See How we Show The Problems , <span className='font-normal text-slate-600'>Right on the Target</span></h1>
+      <div className="w-[80%] align-middle">
         <Slider {...settings}>
           {caseStudies.map((caseStudy, index) => (
-            <div key={index} className="flex lg:flex border items-center gap-6 lg:gap-10 p-6">
-              <div className="lg:w-1/2 border">
-                <h2 className="text-2xl font-semibold mb-4">{caseStudy.company}</h2>
-                <p className="text-lg italic mb-4">{caseStudy.text}</p>
-                <button className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition">
+            <div key={index} className=" rounded-xl bg-slate-100 p-8">
+              <div className='flex w-full'>
+
+              <div className=" w-[50%] items-start justify-center flex flex-col gap-y-8 px-9">
+                <h2 className="text-3xl font-bold mb-4">{caseStudy.company}</h2>
+                <p className="text-2xl mb-4">{caseStudy.text}</p>
+                <button className="px-6 py-4 bg-green-500 text-white text-xl rounded-[30px] hover:bg-green-600 transition">
                   View case study
                 </button>
-                <h5 className="mt-4 font-medium text-gray-600">
+                <h5 className="mt-4 font-semibold text-gray-600">
                   {caseStudy.name} – {caseStudy.title}
                 </h5>
               </div>
-              <div className="lg:w-1/2 border">
-                <img
+
+              <div className=' w-[50%]'>
+              <img
+                  className='rounded-2xl shadow-lg '
                   src={caseStudy.image}
                   alt={caseStudy.company}
-                  className="w-full h-full max-w-sm mx-auto rounded-lg shadow-lg"
                 />
+              </div>
               </div>
             </div>
           ))}
@@ -67,15 +83,22 @@ function Section5(){
   
         {/* Custom Progress Indicator */}
         <div className="flex justify-center gap-3 mt-6">
-          {caseStudies.map((_, index) => (
+          {caseStudies.map((item, index) => (
+            <div>
             <div
               key={index}
-              className={`w-40 h-2 rounded-2xl ${
+              className={`w-40 h-[5px] rounded-2xl ${
                 currentSlide === index ? 'bg-green-500' : 'bg-gray-300'
               } transition-colors duration-300`}
             />
+            <div className='flex gap-x-3 mt-5 items-center '>
+              <p>{item.icon}</p>
+              <h1 className='text-xl'>{item.iconText}</h1>
+            </div>
+            </div>
           ))}
         </div>
+      </div>
       </div>
     );
 }

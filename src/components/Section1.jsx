@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import headerImg from '../img/7.webp'
 export default function Component() {
-  return (
+  return(
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <motion.section
@@ -13,12 +13,11 @@ export default function Component() {
       >
         {/* Background Image */}
         <img
-          src="/img/7.webp"
+          src={headerImg}
           alt="Wind turbines in a field at sunset"
           className="absolute inset-0 w-full h-full object-cover z-0"
         />
         <div className="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
-
         {/* Overlay Content */}
         <div className="relative z-20 h-full flex flex-col justify-between p-6 lg:p-12">
           <div>
