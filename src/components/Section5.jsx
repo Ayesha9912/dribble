@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState} from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -98,6 +99,17 @@ function Section5(){
       </div>
       </div>
     );
+=======
+import React from 'react'
+
+function Section5(){
+    //Ayesha Mehmood Section
+  return (
+    <div>
+        
+    </div>
+  )
+>>>>>>> a86adcb171c94eadcf933f64ac450cc0e814a574
 }
 
 export default Section5

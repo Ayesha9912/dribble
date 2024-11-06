@@ -10,10 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.1.5",
     "framer-motion": "^11.11.11",
     "heroicons": "^2.1.5",
+=======
+    "framer-motion": "^11.11.10",
+>>>>>>> a86adcb171c94eadcf933f64ac450cc0e814a574
     "lucide-react": "^0.454.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

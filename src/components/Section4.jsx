@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { GoArrowUpRight } from "react-icons/go";
 import img1 from '../img/pexels-trinh-tr-n-191284110-14613939.jpg';
@@ -33,3 +34,16 @@ function Section4(){
   )
 }
 export default Section4;
+=======
+import React from 'react'
+
+function Section4(){
+
+    // Ayesha Mehmood Section
+  return (
+    <div>Section4</div>
+  )
+}
+
+export default Section4
+>>>>>>> a86adcb171c94eadcf933f64ac450cc0e814a574

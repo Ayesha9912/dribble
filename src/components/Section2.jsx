@@ -9,39 +9,66 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion"; // Import motion
 
+<<<<<<< HEAD
 const FeaturesSection = () =>{
   const features = [
     {
       icon: <Shield className="text-green-500"/>,
+=======
+const FeaturesSection = () => {
+  const features = [
+    {
+      icon: <Shield className="text-green-500" />,
+>>>>>>> a86adcb171c94eadcf933f64ac450cc0e814a574
       title: "Layered security",
       description:
         "With layered security, we ensure the safety of every unit we provide.",
     },
     {
+<<<<<<< HEAD
       icon: <CheckCircle className="text-green-500"/>,
+=======
+      icon: <CheckCircle className="text-green-500" />,
+>>>>>>> a86adcb171c94eadcf933f64ac450cc0e814a574
       title: "Quality control of each part",
       description: "Every unit you send is checked carefully for every detail.",
     },
     {
+<<<<<<< HEAD
       icon: <Headphones className="text-green-500"/>,
+=======
+      icon: <Headphones className="text-green-500" />,
+>>>>>>> a86adcb171c94eadcf933f64ac450cc0e814a574
       title: "Reliable customer service",
       description:
         "Our customer service is available 24 hours a week, with qualified people.",
     },
     {
+<<<<<<< HEAD
       icon: <BookOpen className="text-green-500"/>,
+=======
+      icon: <BookOpen className="text-green-500" />,
+>>>>>>> a86adcb171c94eadcf933f64ac450cc0e814a574
       title: "Maintenance manual book",
       description:
         "We provide a guidebook that can be used to ensure maximum care.",
     },
     {
+<<<<<<< HEAD
       icon: <Truck className="text-green-500"/>,
+=======
+      icon: <Truck className="text-green-500" />,
+>>>>>>> a86adcb171c94eadcf933f64ac450cc0e814a574
       title: "Delivered safely",
       description:
         "Every unit we send arrives safely and quickly, without any obstacles or drama.",
     },
     {
+<<<<<<< HEAD
       icon: <BrainCircuit className="text-green-500"/>,
+=======
+      icon: <BrainCircuit className="text-green-500" />,
+>>>>>>> a86adcb171c94eadcf933f64ac450cc0e814a574
       title: "Based on artificial intelligence",
       description:
         "You can control and view each unit from your phone. It’s very easy to use.",
