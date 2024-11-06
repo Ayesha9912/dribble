@@ -50,16 +50,16 @@ function Section5(){
       }
     ];
     return(
-      <div className='w-full items-center  flex flex-col py-36'>
-        <h1 style={{"lineHeight": "70px"}} className='text-5xl font-semibold w-[100%] lg:w-[35%] text-center mb-10'>See How we Show The Problems , <span className='font-normal text-slate-600'>Right on the Target</span></h1>
+      <div className='w-full items-center  flex flex-col py-10 md:py-36'>
+        <h1  className='text-3xl lg:text-5xl font-semibold w-[100%] lg:w-[45%] text-center mb-10'>See How we Show The Problems , <span className='font-normal text-slate-600'>Right on the Target</span></h1>
       <div className="w-[80%] align-middle">
         <Slider {...settings}>
           {caseStudies.map((caseStudy, index) => (
-            <div key={index} className=" rounded-xl bg-slate-100 p-8">
+            <div key={index} className=" rounded-xl bg-slate-100 p-2 lg:p-8">
               <div className='lg:flex w-full'>
-              <div className="w-[100%] lg:w-[50%] items-start justify-center flex flex-col gap-y-8 px-9">
+              <div className="w-[100%] lg:w-[50%] items-start justify-center flex flex-col gap-y-8 px-1 md:px-9">
                 <h2 className="text-3xl font-bold mb-4">{caseStudy.company}</h2>
-                <p className="text-2xl mb-4">{caseStudy.text}</p>
+                <p className=" text-lg md:text-2xl mb-4">{caseStudy.text}</p>
                 <button className="px-6 py-4 bg-green-500 text-white text-xl rounded-[30px] hover:bg-green-600 transition">
                   View case study
                 </button>
@@ -70,7 +70,7 @@ function Section5(){
 
               <div className=' w-[100%] lg:w-[50%]'>
               <img
-                  className='rounded-2xl shadow-lg '
+                  className='rounded-2xl shadow-lg mt-10 md:mt-0'
                   src={caseStudy.image}
                   alt={caseStudy.company}
                 />
@@ -79,19 +79,18 @@ function Section5(){
             </div>
           ))}
         </Slider>
-        {/* Custom Progress Indicator */}
         <div className="flex justify-center gap-3 mt-6">
           {caseStudies.map((item, index) => (
             <div>
             <div
               key={index}
-              className={`w-40 mt-[20px] h-[5px] rounded-2xl ${
+              className={`w-20 md:w-40 mt-[20px] h-[5px] rounded-2xl ${
                 currentSlide === index ? 'bg-green-500' : 'bg-gray-300'
               } transition-colors duration-300`}
             />
-            <div className='flex gap-x-3 mt-5 items-center '>
+            <div className='md:flex gap-x-3 mt-5 items-center '>
               <p>{item.icon}</p>
-              <h1 className='text-xl'>{item.iconText}</h1>
+              <h1 className='text-md md:text-xl'>{item.iconText}</h1>
             </div>
             </div>
           ))}

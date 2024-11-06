@@ -1,18 +1,21 @@
 import React from 'react'
 import Navbar from './components/Navbar'
-import Component from './components/Section1'
-import FeaturesSection from './components/Section2'
-import Section4 from './components/Section4';
-import Section5 from './components/Section5';
+import Home from './components/Home';
 import Footer from './components/Footer';
+import Contactus from './components/Contactus';
+import { BrowserRouter, Routes , Route } from 'react-router-dom';
+import Test from './components/Testimonials';
 function App(){
   return(
     <div>
-      <Navbar/>
-      <Component/>
-      <FeaturesSection/>
-      <Section4/>
-      <Section5/>
+      {/* <Navbar/> */}
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/contact" element={<Contactus/>}/>
+        <Route path="/test" element={<Test/>}/>
+      </Routes>
+      </BrowserRouter>
       <Footer/>
     </div>
   )

@@ -49,7 +49,7 @@ function Footer(){
   </div>
   <ul className='md:flex md:items-center translate-all duration-500 ease-in text-gray-400 gap-6  ml-2 text-md'>
           {
-            Link.map(links => <li className='hover:text-white'><a href='/'>{links.name}</a></li>)
+            Link.map((links, index) => (<li key={index} className='hover:text-white'><a href='/'>{links.name}</a></li>))
           }
           </ul>
          
